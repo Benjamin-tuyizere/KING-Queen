@@ -4,6 +4,7 @@ from django.contrib.auth import views as auth_views
 from management import views
 from django.views.generic import RedirectView
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', RedirectView.as_view(url='/admin/', permanent=False)),
@@ -60,4 +61,5 @@ urlpatterns = [
         auth_views.LogoutView.as_view(next_page='login'),
         name='logout'
     ),
+
 ]
